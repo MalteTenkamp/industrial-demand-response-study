@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---------------------------------------------------------------------------
+# Projektspezifisch
+# ---------------------------------------------------------------------------
+# JetBrains / PyCharm IDE-Konfiguration (lokal, gehoert nicht ins Repo)
+.idea/
+
+# Grosse 5s-Rohdaten (>100 MB, GitHub-Limit) — lokal vorhalten, nicht versionieren.
+# Modell nutzt nur die kleinen Templates in templates/.
+data/EPI_ChipPress_2024_P_total.csv
+data/EPI_PV_2024_AC_ActivePower.csv
+data/TEC_Chiron800_2024_P_total.csv
+data/legacy/
