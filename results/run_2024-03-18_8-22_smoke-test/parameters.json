@@ -1,0 +1,79 @@
+{
+  "study_year": 2024,
+  "seed": 187,
+  "model_day": "2024-03-18",
+  "labels": {
+    "util_note": "smoke-test"
+  },
+  "time": {
+    "workday_start": "08:00",
+    "workday_end": "22:00",
+    "step_min": 15,
+    "n_slots": 56
+  },
+  "production": {
+    "housings_per_mill_run": 100,
+    "modules_per_press_run": 40,
+    "housings_consumed_per_press_run": 40
+  },
+  "inventory": {
+    "initial_stock_housings": 60,
+    "initial_stock_modules": 30,
+    "storage_capacity_housings": 300,
+    "storage_capacity_modules": 500
+  },
+  "eco_mode": {
+    "power_scaling": 0.75,
+    "time_stretch": 1.25
+  },
+  "session_upper_bounds": {
+    "max_mill_runs_per_day": 4,
+    "max_press_runs_per_day": 10,
+    "max_mill_runs_per_window": 8,
+    "max_press_runs_per_window": 20,
+    "mill_runs_ceiling": 5,
+    "press_runs_ceiling": 11
+  },
+  "derived_slot_durations": {
+    "mill_normal": 10,
+    "mill_eco": 13,
+    "press": 5
+  },
+  "auto_tuning": {
+    "adjustments": [
+      {
+        "param": "STORAGE_CAPACITY_MODULES",
+        "old": 450,
+        "new": 500,
+        "reason": "single_slot_module_storage",
+        "trigger_date": "2024-02-16",
+        "need": 470,
+        "have_before": 450
+      }
+    ],
+    "n_adjustments": 1
+  },
+  "order_book": {
+    "file": "data/orderbook_2024.csv",
+    "meta_file": "data/orderbook_2024_meta.json",
+    "stats": {
+      "n_business_days": 252,
+      "n_pickups": 449,
+      "mean_pickups_per_day": 1.782,
+      "qty_mean": 132.49,
+      "qty_median": 130.0,
+      "qty_max": 200,
+      "daily_total_mean": 236.07,
+      "daily_total_max": 500,
+      "annual_total": 59490,
+      "n_at_1500": 233,
+      "n_at_2200": 216
+    }
+  },
+  "price_file": "data/electricity_prices_15min_de_2018_2024.csv",
+  "calendar_file": "data/business_days.csv",
+  "template_files": {
+    "mill": "chiron_session6_min230-380_1min.csv",
+    "press": "chippress_session4_window_1min.csv"
+  }
+}
