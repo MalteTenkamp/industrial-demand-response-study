@@ -1,0 +1,37 @@
+{
+  "seed": 187,
+  "study_year": 2024,
+  "generator": "numpy.random.default_rng",
+  "distribution": {
+    "pickups_mu": 1.7,
+    "pickups_sigma": 0.7,
+    "pickups_clip": [
+      1,
+      3
+    ],
+    "qty_mu": 130,
+    "qty_sigma": 30,
+    "qty_trunc": [
+      60,
+      200
+    ],
+    "qty_round_to": 10,
+    "times": [
+      "15:00",
+      "22:00"
+    ]
+  },
+  "stats": {
+    "n_business_days": 252,
+    "n_pickups": 449,
+    "mean_pickups_per_day": 1.782,
+    "qty_mean": 132.49,
+    "qty_median": 130.0,
+    "qty_max": 200,
+    "daily_total_mean": 236.07,
+    "daily_total_max": 500,
+    "annual_total": 59490,
+    "n_at_1500": 233,
+    "n_at_2200": 216
+  }
+}
