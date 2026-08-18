@@ -20,7 +20,7 @@
     "initial_stock_housings": 60,
     "initial_stock_modules": 30,
     "storage_capacity_housings": 300,
-    "storage_capacity_modules": 500
+    "storage_capacity_modules": 450
   },
   "eco_mode": {
     "power_scaling": 0.75,
@@ -40,34 +40,24 @@
     "press": 5
   },
   "auto_tuning": {
-    "adjustments": [
-      {
-        "param": "STORAGE_CAPACITY_MODULES",
-        "old": 450,
-        "new": 500,
-        "reason": "single_slot_module_storage",
-        "trigger_date": "2024-02-16",
-        "need": 470,
-        "have_before": 450
-      }
-    ],
-    "n_adjustments": 1
+    "adjustments": [],
+    "n_adjustments": 0
   },
   "order_book": {
-    "file": "data/orderbook_2024.csv",
+    "file": "data/orderbook_2024_without_duplets.csv",
     "meta_file": "data/orderbook_2024_meta.json",
     "stats": {
       "n_business_days": 252,
-      "n_pickups": 449,
-      "mean_pickups_per_day": 1.782,
-      "qty_mean": 132.49,
+      "n_pickups": 346,
+      "mean_pickups_per_day": 1.373,
+      "qty_mean": 133.93,
       "qty_median": 130.0,
       "qty_max": 200,
-      "daily_total_mean": 236.07,
-      "daily_total_max": 500,
-      "annual_total": 59490,
-      "n_at_1500": 233,
-      "n_at_2200": 216
+      "daily_total_mean": 183.89,
+      "daily_total_max": 370,
+      "annual_total": 46340,
+      "n_at_1500": 176,
+      "n_at_2200": 170
     }
   },
   "price_file": "data/electricity_prices_15min_de_2018_2024.csv",
