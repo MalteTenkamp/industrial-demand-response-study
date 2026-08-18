@@ -1,0 +1,37 @@
+{
+  "study_year": 2024,
+  "seed": 187,
+  "order_book_file": "data/orderbook_2024_without_duplets.csv",
+  "price_file": "data/electricity_prices_15min_de_2018_2024.csv",
+  "calendar_file": "data/business_days.csv",
+  "initial_stock": {
+    "housings": 60,
+    "modules": 30
+  },
+  "storage_capacity": {
+    "housings": 300,
+    "modules": 450
+  },
+  "caps": {
+    "max_mill_runs_per_day": 4,
+    "max_press_runs_per_day": 10,
+    "max_mill_runs_per_window": 8,
+    "max_press_runs_per_window": 20
+  },
+  "slot_durations": {
+    "mill_normal": 10,
+    "mill_eco": 13,
+    "press": 5
+  },
+  "run_energies_kwh": {
+    "mill_normal": 13.798351666666667,
+    "mill_eco": 13.149625863970588,
+    "press": 15.736406666666666
+  },
+  "solver": {
+    "name": "appsi_highs",
+    "mip_gap": 0.0,
+    "time_limit_s": 60
+  },
+  "n_business_days": 252
+}
