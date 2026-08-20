@@ -44,20 +44,38 @@
     "n_adjustments": 0
   },
   "order_book": {
-    "file": "data/orderbook_2024_without_duplets.csv",
+    "file": "data/orderbook_2024.csv",
     "meta_file": "data/orderbook_2024_meta.json",
+    "generator": {
+      "p": 0.9,
+      "mu": 150,
+      "sigma": 30,
+      "trunc": [
+        80,
+        190
+      ],
+      "round_to": 10,
+      "times": [
+        "15:00",
+        "22:00"
+      ],
+      "rule": "per (business day, time) independent Bernoulli(p); at most one pickup per (date,time) by construction"
+    },
     "stats": {
       "n_business_days": 252,
-      "n_pickups": 346,
-      "mean_pickups_per_day": 1.373,
-      "qty_mean": 133.93,
-      "qty_median": 130.0,
-      "qty_max": 200,
-      "daily_total_mean": 183.89,
-      "daily_total_max": 370,
-      "annual_total": 46340,
-      "n_at_1500": 176,
-      "n_at_2200": 170
+      "n_pickups": 455,
+      "mean_pickups_per_day": 1.806,
+      "qty_mean": 148.37,
+      "qty_median": 150.0,
+      "qty_max": 190,
+      "daily_total_mean": 268.96,
+      "daily_total_max": 380,
+      "annual_total": 67510,
+      "utilisation_pct": 66.97,
+      "zero_pickup_days": 1,
+      "one_pickup_days": 47,
+      "n_at_1500": 227,
+      "n_at_2200": 228
     }
   },
   "price_file": "data/electricity_prices_15min_de_2018_2024.csv",
