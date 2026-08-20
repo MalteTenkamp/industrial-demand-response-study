@@ -1,7 +1,38 @@
 {
   "study_year": 2024,
   "seed": 187,
-  "order_book_file": "data/orderbook_2024_without_duplets.csv",
+  "order_book_file": "data/orderbook_2024.csv",
+  "order_book_generator": {
+    "p": 0.9,
+    "mu": 150,
+    "sigma": 30,
+    "trunc": [
+      80,
+      190
+    ],
+    "round_to": 10,
+    "times": [
+      "15:00",
+      "22:00"
+    ],
+    "rule": "per (business day, time) independent Bernoulli(p); at most one pickup per (date,time) by construction"
+  },
+  "order_book_stats": {
+    "n_business_days": 252,
+    "n_pickups": 455,
+    "mean_pickups_per_day": 1.806,
+    "qty_mean": 148.37,
+    "qty_median": 150.0,
+    "qty_max": 190,
+    "daily_total_mean": 268.96,
+    "daily_total_max": 380,
+    "annual_total": 67510,
+    "utilisation_pct": 66.97,
+    "zero_pickup_days": 1,
+    "one_pickup_days": 47,
+    "n_at_1500": 227,
+    "n_at_2200": 228
+  },
   "price_file": "data/electricity_prices_15min_de_2018_2024.csv",
   "calendar_file": "data/business_days.csv",
   "initial_stock": {
